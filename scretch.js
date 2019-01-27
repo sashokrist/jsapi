@@ -1,5 +1,5 @@
 var api = 'http://api.openweathermap.org/data/2.5/weather?q=';
-
+var city = document.getElementById("city").value;
 var apiKey = '&APPID=b411acedff0fca6e3d2414e032140192';
 var tempUnit = '&units=metric';
 function setup(){
@@ -7,7 +7,7 @@ function setup(){
  }
 
  function weatherAsk(){
-    var url = api + document.getElementById("city").value + apiKey + tempUnit;
+    var url = api + city + apiKey + tempUnit;
     loadJSON(url, gotData);
  }
 
